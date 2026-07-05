@@ -4,7 +4,7 @@ import 'package:confetti/confetti.dart';
 class RewardScreen extends StatefulWidget {
   final String questName;
   final int xpEarned;
-  final int totalXp; // running total XP across the app
+  final int totalXp;
 
   const RewardScreen({
     super.key,
@@ -24,7 +24,7 @@ class _RewardScreenState extends State<RewardScreen> {
   void initState() {
     super.initState();
     _confettiController = ConfettiController(duration: const Duration(seconds: 2));
-    _confettiController.play(); // starts popping immediately when screen opens
+    _confettiController.play();
   }
 
   @override
@@ -36,7 +36,7 @@ class _RewardScreenState extends State<RewardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.deepPurple,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Stack(
           alignment: Alignment.topCenter,
@@ -53,7 +53,7 @@ class _RewardScreenState extends State<RewardScreen> {
                     height: 140,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
-                      color: Colors.white.withOpacity(0.15),
+                      color: Colors.deepPurple.withOpacity(0.1),
                     ),
                     child: const Icon(
                       Icons.workspace_premium,
@@ -69,14 +69,14 @@ class _RewardScreenState extends State<RewardScreen> {
                     style: TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.deepPurple,
                     ),
                   ),
                   const SizedBox(height: 10),
                   const Text(
                     "You have completed the quest successfully",
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 15, color: Colors.white70),
+                    style: TextStyle(fontSize: 15, color: Colors.grey),
                   ),
                   const SizedBox(height: 6),
                   Text(
@@ -84,7 +84,7 @@ class _RewardScreenState extends State<RewardScreen> {
                     style: const TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
-                      color: Colors.white,
+                      color: Colors.black87,
                     ),
                   ),
                   const SizedBox(height: 24),
@@ -93,7 +93,7 @@ class _RewardScreenState extends State<RewardScreen> {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                     decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.15),
+                      color: Colors.deepPurple.withOpacity(0.1),
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: Row(
@@ -106,7 +106,7 @@ class _RewardScreenState extends State<RewardScreen> {
                           style: const TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white,
+                            color: Colors.deepPurple,
                           ),
                         ),
                       ],
@@ -119,7 +119,7 @@ class _RewardScreenState extends State<RewardScreen> {
                     width: double.infinity,
                     padding: const EdgeInsets.symmetric(vertical: 16),
                     decoration: BoxDecoration(
-                      color: Colors.white,
+                      color: Colors.deepPurple.shade50,
                       borderRadius: BorderRadius.circular(16),
                     ),
                     child: Column(
@@ -150,7 +150,7 @@ class _RewardScreenState extends State<RewardScreen> {
                         Navigator.popUntil(context, (route) => route.isFirst);
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
+                        backgroundColor: Colors.deepPurple,
                         padding: const EdgeInsets.symmetric(vertical: 14),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(12),
@@ -160,7 +160,7 @@ class _RewardScreenState extends State<RewardScreen> {
                         "Back to Home",
                         style: TextStyle(
                           fontSize: 16,
-                          color: Colors.deepPurple,
+                          color: Colors.white,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -173,7 +173,7 @@ class _RewardScreenState extends State<RewardScreen> {
             // ---------- CONFETTI (on top of everything) ----------
             ConfettiWidget(
               confettiController: _confettiController,
-              blastDirection: 1.5708, // straight down (in radians, ~90°)
+              blastDirection: 1.5708,
               emissionFrequency: 0.05,
               numberOfParticles: 20,
               maxBlastForce: 20,
@@ -182,7 +182,7 @@ class _RewardScreenState extends State<RewardScreen> {
               shouldLoop: false,
               colors: const [
                 Colors.amber,
-                Colors.white,
+                Colors.deepPurple,
                 Colors.purpleAccent,
                 Colors.pinkAccent,
               ],

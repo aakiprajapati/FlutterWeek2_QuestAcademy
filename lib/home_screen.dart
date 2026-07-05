@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:week2_assignment/quest_details.dart';
 import 'dummy_data.dart';
 import 'splash_screen.dart';
+import 'widgets/bottom_nav.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -11,15 +12,9 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  int _selectedIndex = 0; // tracks which bottom nav tab is active
+
   final PageController _pageController = PageController(); // controls the carousel
 
-  void _onNavTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-    // later: navigate to different screens based on index
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -383,18 +378,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ],
         ),
       ),
-
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: _selectedIndex,
-        onTap: _onNavTapped,
-        selectedItemColor: Colors.deepPurple,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.explore), label: "Quests"),
-          BottomNavigationBarItem(icon: Icon(Icons.emoji_events), label: "Rewards"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-        ],
-      ),
+      bottomNavigationBar: const AppBottomNav(currentIndex: 0),
     );
   }
 }

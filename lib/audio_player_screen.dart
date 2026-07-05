@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
+import 'reward_screen.dart';
 
 class AudioPlayerScreen extends StatefulWidget {
   final String songName;
@@ -36,7 +37,17 @@ class _AudioPlayerScreenState extends State<AudioPlayerScreen> {
 
     _player.onPlayerComplete.listen((event) {
       setState(() => _isPlaying = false);
-    });
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => RewardScreen(
+            questName: widget.songName,
+            xpEarned: widget.xpEarned,
+            totalXp: 250 + widget.xpEarned, // placeholder — replace with real running total later
+          ),
+        ),
+      );
+  });
 
     _loadAndPlay();
   }
