@@ -3,12 +3,16 @@ class Quest {
   final String image;
   final String description;
   final int xp;
+  final String difficulty; // "Low", "Medium", "High"
+  final String timeLimit;  // e.g. "10 mins"
 
   Quest({
     required this.title,
     required this.image,
     required this.description,
     required this.xp,
+    this.difficulty = "Medium",
+    this.timeLimit = "10 mins",
   });
 }
 
@@ -43,10 +47,10 @@ List<String> carouselImages = [
 ];
 
 List<Quest> miniQuests = [
-  Quest(title: "Quiz", image: "assets/images/quiz.png", description: "Test your knowledge with quick quizzes.", xp: 30),
-  Quest(title: "Memory Game", image: "assets/images/memory.png", description: "Sharpen your memory with fun matching games.", xp: 40),
-  Quest(title: "Puzzle", image: "assets/images/puzzle.png", description: "Solve puzzles to earn XP.", xp: 35),
-  Quest(title: "Code Challenge", image: "assets/images/code_challenge.png", description: "Solve coding challenges to level up.", xp: 60),
-  Quest(title: "Flash Cards", image: "assets/images/flashcards.png", description: "Review concepts using flash cards.", xp: 25),
-  Quest(title: "Vocabulary", image: "assets/images/vocabulary.png", description: "Build your vocabulary daily.", xp: 20),
+  Quest(title: "Quiz", image: "assets/images/quiz.png", description: "Test your knowledge with quick quizzes.", xp: 50, difficulty: "High", timeLimit: "8 mins"),
+  Quest(title: "Memory Game", image: "assets/images/memory.png", description: "Sharpen your memory with fun matching games.", xp: 40, difficulty: "Medium", timeLimit: "5 mins"),
+  Quest(title: "Puzzle", image: "assets/images/puzzle.png", description: "Solve puzzles to earn XP.", xp: 35, difficulty: "Low", timeLimit: "3 mins"),
+  Quest(title: "Code Challenge", image: "assets/images/code_challenge.png", description: "Solve coding challenges to level up.", xp: 60, difficulty: "High", timeLimit: "8 mins"),
+  Quest(title: "Flash Cards", image: "assets/images/flashcards.png", description: "Review concepts using flash cards.", xp: 25, difficulty: "Medium", timeLimit: "5 mins"),
+  Quest(title: "Vocabulary", image: "assets/images/vocabulary.png", description: "Build your vocabulary daily.", xp: 20, difficulty: "Low", timeLimit: "3 mins"),
 ];
