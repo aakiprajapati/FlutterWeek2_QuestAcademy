@@ -29,6 +29,11 @@ Features:
 5. Reward screen shown on quest completion
 6. Profile screen with badges, progress tracking, settings, and logout
 
+Assets Used:
+
+- Images: 10+ (carousel banners, quest icons, badges, avatars)
+- Audio: 10 mp3 audio, where success.mp3 is played on quest screens)
+- Fonts: 3 custom fonts used for headings, body text, and accents
 ## Getting Started
 
 This project is a starting point for a Flutter application.
