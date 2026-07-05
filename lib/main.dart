@@ -11,7 +11,10 @@ class EntryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'Poppins', // applies to the whole app by default
+      ),
       home: SplashScreen(),
     );
   }

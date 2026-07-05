@@ -67,6 +67,7 @@ class _RewardScreenState extends State<RewardScreen> {
                   const Text(
                     "Congratulations!",
                     style: TextStyle(
+                      fontFamily: 'Baloo2',
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
                       color: Colors.deepPurple,

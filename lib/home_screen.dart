@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:week2_assignment/profile_screen.dart';
 import 'package:week2_assignment/quest_details.dart';
 import 'dummy_data.dart';
 import 'splash_screen.dart';
@@ -20,7 +21,14 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Quest Academy"),
+        title: const Text(
+          "Quest Academy",
+          style: TextStyle(
+            fontFamily: 'Cedarville',
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
         centerTitle: true,
         actions: [
           IconButton(
@@ -96,7 +104,10 @@ class _HomeScreenState extends State<HomeScreen> {
               title: const Text("Profile"),
               onTap: () {
                 Navigator.pop(context);
-                // TODO: navigate to Profile screen
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProfileScreen()),
+                );
               },
             ),
             ListTile(
@@ -193,14 +204,14 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
 
-      const SizedBox(height: 30),
+            const SizedBox(height: 30),
 
 // ---------- QUESTS (GridView)
-      const Text(
-        "🔥 Top Categories",
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-      ),
-      const SizedBox(height: 10),
+            const Text(
+              "🔥 Top Categories",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
             GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
@@ -263,14 +274,14 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
 
-      const SizedBox(height: 30),
+            const SizedBox(height: 30),
 
 // ---------- ACHIEVEMENTS  ----------
-      const Text(
-        "🏅 Achievements",
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-      ),
-      const SizedBox(height: 10),
+            const Text(
+              "🏅 Achievements",
+              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: dummyAchievements.map((achievement) {
@@ -375,7 +386,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
-      ],
+          ],
         ),
       ),
       bottomNavigationBar: const AppBottomNav(currentIndex: 0),

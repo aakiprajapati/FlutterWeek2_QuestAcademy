@@ -1,6 +1,21 @@
 # week2_assignment
 
-A new Flutter project.
+Quest Academy is a gamified learning app where users can learn concepts such as Flutter, Dart Basics, Firebase and UI design through games. For this assignment, the UI for the app has been prepared, where the following screens have been made:
+
+1. Splash Screen
+2. Home Screen
+3. Quest Details Screen
+4. Audio Player Screen
+5. Rewards Screen
+6. Profile Screen
+
+Similarly, the app bar and bottom navigation bar have also been made for easy navigation. Users can also see their progress and edit their profiles.
+
+Additionally, for audio player and confetti, the developer mode was required to be on, which was opened by the following command in the Command Prompt.
+
+start ms-settings:developers
+
+Games such as Memory Game, Puzzle, Quiz, Flashcards, Vocabulary and Code Challenges have also been added which provides XP upon winning the game within the time frame.
 
 ## Getting Started
 

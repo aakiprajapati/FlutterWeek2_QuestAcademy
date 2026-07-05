@@ -39,6 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 const Text(
                   "Quest Academy",
                   style: TextStyle(
+                    fontFamily: 'Cedarville',
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,

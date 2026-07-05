@@ -99,7 +99,7 @@ class QuestDetailScreen extends StatelessWidget {
                                 children: [
                                   Text(
                                     quest.title,
-                                    style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                                    style: const TextStyle(fontSize: 24, fontFamily: 'Baloo2', fontWeight: FontWeight.bold),
                                   ),
                                   Text(
                                     "${quest.xp} XP",
